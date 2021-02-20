@@ -11,9 +11,44 @@
 </head>
 
 <body>
+	<div class="container w-100">
+		<div class="row">
+			<div class="col-12 col-lg-6 p-4 text-center">
+				<div class="card bg-light p-1 text-center" style="box-shadow: 1px 1px 7px 7px  rgb(199, 198, 198);">
+					<h1 class="pb-1 m-1">Индекс массы тела</h1>
+					<div class="form-floating p-1 text-center">
+						<input type="number" class="form-control text-center" id="floatingInputMass" value="50"
+							step="1">
+						<label for="floatingInputMass">Ваш вес в килограмах:</label>
+					</div>
+					<div class="form-floating p-1">
+						<input type="number" class="form-control text-center" id="floatingInputRost" value="150">
+						<label for="floatingInputRost">Ваш рост в сантиметрах:</label>
+					</div>
 
-	<h1 class="color:red;">h1 bootsstrap </h1>
+					<button onclick='indexMassBody()' class="btn btn-primary mt-2 p-1 m-1">Определить</button>
+					<div class="card-body mt-0">
+						<div class="card-tittle mt-0 ">
+							<output class="p-1" id="resultIndex">
+								<h3>Индекс массы тела</h3>
+							</output>
+						</div>
+						<div class="card-text">
+							<h6><output class="p-2 bg-white text-dark" style="font-style: italic;" id="result">
+									<i>величина, позволяющая
+										оценить
+										степень
+										соответствия массы человека и его роста и тем самым косвенно судить о том,
+										является
+										ли
+										масса недостаточной, нормальной или избыточной.</i></output></h6>
 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 

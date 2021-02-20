@@ -1,4 +1,4 @@
-/*let massive = ['alla', 'olla', 'Kolya'];
+let massive = ['alla', 'olla', 'Kolya'];
 
 massive.push('Vasya');
 massive.unshift('Katya');
@@ -20,4 +20,4 @@ for (let item of mas) {
 
 }
 console.log(addPay);
-*/
+

@@ -27,5 +27,31 @@ function indexMassBody() {
 		result.innerHTML = 'с такими пропорциями долго не протянуть...Покажитесь доктору!'; // выводим в разметку
 	}
 }
+// Депозитный калькулятор !
+function DepositeCalc() {
+	let summa = +sumInput.value;
+	let term = +termInput.value;
+	let rate = +rateInput.value;
 
+	let mRate = rate / 12 / 100;
 
+	let depositeTotal;
+
+	if (capInput.checked) {									// если галочка стоит тогда :
+		depositeTotal = summa * ((1 + mRate) ** term);
+	} else {												// если не стоит тогда :
+		depositeTotal = summa + summa * mRate * term;
+	}
+
+	resultDeposite.innerHTML = Math.round(depositeTotal);	// выводим в разметку
+}
+function year() {
+	let year = +yearS.value;
+	let isYear;
+	if ((year % 400 == 0) || (year % 4 == 0) && (year % 100)) {
+		isYear = year;
+		otvet.innerHTML = ` высокостный`;
+	} else {
+		otvet.innerHTML = ` невысокостный`;
+	}
+}

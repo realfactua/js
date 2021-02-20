@@ -102,20 +102,18 @@ for (let i = 1; i <= 100; i++) {
 */
 
 
+// ?????????????????????????
 
-
-
-let isPrime = false;
-for (let i = 3; i <= 1000; i++) {
+let count = 0;
+for (let i = 3; i <= 100; i++) {
 	for (let j = 2; j <= i - 1; j++) {
 		if (i % j == 0) {
 			isPrime = false;
 			break;
 		} else {
 			isPrime = true;
+		} if (isPrime == true) {
+			console.log(isPrime);
 		}
-	}
-	if (isPrime == true) {
-		console.log(i);
 	}
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/assets/js/main.js"></script>
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+
+<body>
+	<header class="bg-primary text-center">
+		<h1 class="p-3 text-white">JavaScript</h1>
+	</header>
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-12 col-lg-6 p-4">
+
+				<div class="card bg-light p-1 text-center" style="box-shadow: 1px 1px 7px 7px  rgb(199, 198, 198);">
+
+					<h1 class="pb-1 m-1">Индекс массы тела</h1>
+
+					<div class="form-floating p-1 text-center">
+						<input type="number" class="form-control text-center" id="floatingInputMass" value="50"
+							step="1">
+						<label for="floatingInputMass">Ваш вес в килограмах:</label>
+					</div>
+					<div class="form-floating p-1">
+						<input type="number" class="form-control text-center" id="floatingInputRost" value="150">
+						<label for="floatingInputRost">Ваш рост в сантиметрах:</label>
+					</div>
+
+					<button onclick='indexMassBody()' class="btn btn-primary mt-2 p-1 m-1">Определить</button>
+					<div class="card-body mt-0">
+						<div class="card-tittle mt-0 ">
+							<output class="p-1" id="resultIndex">
+								<h3>Индекс массы тела</h3>
+							</output>
+						</div>
+						<div class="card-text">
+							<h6><output class="p-2 bg-white text-dark" style="font-style: italic;" id="result">
+									<i>величина, позволяющая
+										оценить
+										степень
+										соответствия массы человека и его роста и тем самым косвенно судить о том,
+										является
+										ли
+										масса недостаточной, нормальной или избыточной.</i></output></h6>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-6 p-4">
+
+				<div class="card  bg-light p-1 text-center" style="box-shadow: 1px 1px 7px 7px  rgb(199, 198, 198);">
+
+					<h1 class="pb-1 m-1">Депозитный калькулятор</h1>
+
+					<!-- Input Data Form -->
+					<div class='row row-cols-1 row-cols-lg-4 my-4 p-2'>
+
+						<div class="form-group">
+							<label for="sumInput">Сумма вклада (грн.)</label>
+							<input type="number" class="form-control" id="sumInput" min="1000" max="999999999"
+								value="10000">
+						</div>
+
+						<div class="form-group">
+							<label for="termInput">Срок вклада (мес.)</label>
+							<input type="number" class="form-control" id="termInput" min="3" max="48" value="12">
+						</div>
+
+						<div class="form-group">
+							<label for="rateInput">Ставка (% годовых)</label>
+							<input type="number" class="form-control" id="rateInput" min="1" max="100" value="12.00"
+								step='0.01'>
+						</div>
+
+						<div class="form-group">
+							<label for="capInput">Капитализация %</label>
+							<input class="d-block" style="width:32px;height:32px; margin: 0 auto;" type="checkbox"
+								id="capInput">
+						</div>
+						<div class="col-12 col-lg-12 mt-4">
+							<button onclick='DepositeCalc()' class="btn btn-primary p-1 w-100">Рассчитать</button>
+
+							<!-- /Input Data Form -->
+
+							<button class="mt-4 bg-white"
+								style="width: 120px;height:32px; border-radius: 4px; border: 1px solid gray;"
+								id="resultDeposite"></button>
+
+							</h3>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-6 p-4">
+				<div class="card bg-light text-center" style="box-shadow: 1px 1px 7px 7px  rgb(199, 198, 198);">
+					<div class="card-body">
+						<h3 class="card-text">Узнайте, Высокостный ли год или нет?!</h3> <label for="year">Введите
+							год:</label>
+						<input id="yearS" type="number" step="1">
+					</div>
+					<div>
+						<button class="btn btn-primary w-50 p-1" onclick='year()'>Узнать</button>
+					</div>
+					<div style="margin: 0 auto;">
+						<button class="bg-white mb-3 mt-3"
+							style="width: 130px;height:32px; border-radius: 4px; border: 1px solid gray; display: inline-block"
+							id="otvet"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+
+</html>
